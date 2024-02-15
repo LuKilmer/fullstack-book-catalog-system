@@ -1,0 +1,16 @@
+{
+    "nome": "João",
+    "idade": 25,
+    "cidade": "São Paulo",
+    "emails": [
+      "joao@email.com",
+      "joao.pessoa@email.com"
+    ],
+    "ativo": true,
+    "endereco": {
+      "logradouro": "Rua ABC",
+      "numero": 123,
+      "bairro": "Centro"
+    },
+    "interesses": ["programação", "viagens", "música"]
+  }
