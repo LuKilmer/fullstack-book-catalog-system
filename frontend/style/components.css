@@ -3,7 +3,6 @@
     margin:2px;
 }
 .editoras-item:nth-child(2n){
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    color:red;
+    border-bottom: 3px solid #FFC1F1;
+    border-top: 3px solid #FFC1F1;
 }

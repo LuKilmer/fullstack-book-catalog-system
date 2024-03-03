@@ -1,8 +1,14 @@
+import Editora from "../model/ediotra.js";
 import Livro from "../model/livro.js";
 
 class Controller{
+    #editoras_url;
+    #editoras_list;
+    #book_list;
     constructor(){
-        this.book_list = []
+        this.#editoras_url = "http://localhost:3000/editoras/";
+        this.#editoras_list = [];
+        this.#book_list = [];
     }
     teste(){
         let livro1 = new Livro(1,"Amor e Liberdade", 1968,["Romance","Drama"]);
@@ -27,6 +33,33 @@ class Controller{
             entrada.value = "";
             console.log("negado");
         }
+    }
+
+    
+
+    getEditoras(){
+        fetch(this.#editoras_url)
+        .then( elements => elements.json())
+        .then( elements => 
+            elements.forEach(element =>{
+                let editora = new Editora(
+                    element.id,
+                    element.nome,
+                    element.descricao,
+                    element.imagem,
+                    element.avaliacao
+                );
+                this.#editoras_list.push(editora);
+            })
+        )
+        .then(console.log("ok")
+        )
+        .catch(
+
+        )
+        .finally(
+            console.log("okk")
+        );
     }
 
 }

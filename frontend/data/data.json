@@ -1,0 +1,28 @@
+{
+    "editoras":[
+        {
+            "id":1,
+            "nome":"Saraiva",
+            "obras":42,
+            "descricao":"A Editora Saraiva é uma renomada editora brasileira, com vasta tradição no mercado editorial. Reconhecida por sua diversidade de publicações, oferece livros acadêmicos, jurídicos e literatura, destacando-se pela qualidade editorial.",
+            "imagem":"./data/imgs/saraiva.png",
+            "avaliacao":4.5
+        },
+        {
+            "id":2,
+            "nome":"Gato Leitor",
+            "obras":12,
+            "descricao":"A Editora Gato Leitor é uma jovem e inovadora editora dedicada a promover histórias cativantes e educativas. Destaca-se por sua abordagem criativa e compromisso com a qualidade literária.",
+            "imagem":"./data/imgs/cat.png",
+            "avaliacao":3.5
+        },
+        {  
+            "id":3,
+            "nome":"Draco",
+            "obras":22,
+            "descricao":"A Draco Editora é uma influente editora brasileira, especializada em literatura fantástica e quadrinhos. Reconhecida por sua diversidade e originalidade, publica obras de alta qualidade que cativam diferentes públicos.",
+            "imagem":"./data/imgs/draco.png",
+            "avaliacao":4
+        }
+    ]
+}
