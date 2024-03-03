@@ -1,0 +1,103 @@
+*{
+    background-color: #fae1cd;
+    box-sizing: border-box;
+    margin:0px;
+}
+#main{
+    display: grid;
+    width:90%;
+    margin:auto;
+    margin-top: 80px;
+    border-radius: 5px;
+    background-color: #f7ce99;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+}
+header{
+    background-color: #FFC1F1;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%
+}
+
+footer{
+    background-color: #FFC1F1;
+    margin-top: 20px;
+    width:100%;
+    height: 60px;
+}
+
+.grid-item{
+    background-color: #FFD8BB;
+    margin:5px;
+    border-radius: 5px;
+
+}
+.grid-item > .header{
+    background-color: #FFC1F1;
+    width: 100%;
+    height: 30px;
+    margin:0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: 600;
+    color:white;
+    text-align: center;
+    padding:5px;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+}
+#carousel-novidades{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#posts{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 16;
+}
+#autores{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+#editoras{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 11;
+}
+@media screen and (max-width:800px) {
+    #main{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #carousel-novidades{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    #posts{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 17;
+    }
+    #autores{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 17;
+        grid-row-end: 21;
+    }
+    #editoras{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 17;
+        grid-row-end: 21;
+    }
+}

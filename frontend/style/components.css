@@ -1,0 +1,9 @@
+.editoras-item{
+    padding:2px;
+    margin:2px;
+}
+.editoras-item:nth-child(2n){
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    color:red;
+}

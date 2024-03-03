@@ -14,6 +14,21 @@ class Controller{
 
         this.book_list.forEach(elemet => {elemet.showData()});
     }
+    createNode(){
+        const body = document.body;
+        const entrada = document.getElementById("entrada");
+        if(entrada.value.length > 8){
+            const auxiliar = document.createElement("li");
+            auxiliar.innerHTML =entrada.value;
+            entrada.value = "";
+            const currentOl = document.getElementById("lista");
+            currentOl.appendChild(auxiliar);
+        }else{
+            entrada.value = "";
+            console.log("negado");
+        }
+    }
+
 }
 
 export default Controller;
