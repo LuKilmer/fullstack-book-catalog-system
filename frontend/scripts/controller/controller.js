@@ -1,25 +1,25 @@
-import Editora from "../model/ediotra.js";
+import Editora from "../model/editora.js";
 import Livro from "../model/livro.js";
+import Autor from "../model/autor.js";
 
 class Controller{
     #editoras_url;
-    #editoras_list;
-    #book_list;
+    #livro_url;
+    #autores_url;
+
+    #editoras_lista;
+    #livros_lista;
+    #autores_lista
+
     constructor(){
         this.#editoras_url = "http://localhost:3000/editoras/";
-        this.#editoras_list = [];
-        this.#book_list = [];
+        this.#livro_url= "http://localhost:3000/livros/";
+        this.#autores_url = "http://localhost:3000/autores/";
+        this.#editoras_lista = [];
+        this.#livros_lista = [];
+        this.#autores_lista =[];
     }
-    teste(){
-        let livro1 = new Livro(1,"Amor e Liberdade", 1968,["Romance","Drama"]);
-        let livro2 = new Livro(2,"Arte da Guerra", 1988,["Filosofia"]);
-        let livro3 = new Livro(3,"Noite na Cabana", 2005,["Terror", "Suspense"]);
-        let livro4 = new Livro(4,"Ciência da Computação I", 1960,["Ciência","Tecnologia"]);
-        let livro5 = new Livro(5,"Matemática Aplicada", 1970,["Ciência","Tecnologia"]);
-        this.book_list = [livro1,livro2,livro3,livro4,livro5];
 
-        this.book_list.forEach(elemet => {elemet.showData()});
-    }
     createNode(){
         const body = document.body;
         const entrada = document.getElementById("entrada");
@@ -32,6 +32,25 @@ class Controller{
         }else{
             entrada.value = "";
             console.log("negado");
+        }
+    }
+    getNomeAutorPorID(id){
+
+
+        let autor = this.#autores_lista[id-1];
+        if(autor==undefined){
+            return "Não encontrado";
+        }else{
+            return autor.nome;
+        }
+    }
+
+    getNomeEditoraPorID(id){
+        let editora = this.#editoras_lista[id-1];
+        if(editora==undefined){
+            return "Não encontrado";
+        }else{
+            return editora.nome;
         }
     }
 
@@ -49,16 +68,83 @@ class Controller{
                     element.imagem,
                     element.avaliacao
                 );
-                this.#editoras_list.push(editora);
+                this.#editoras_lista.push(editora);
+            })
+        )
+        .catch(error => {
+            throw(error);
+            }
+        )
+        .finally(
+            console.log("editoras lidos")
+        );
+    }
+    showLivroData(){
+        this.#livros_lista.forEach(livro=>{
+                    
+            let resposta = "Nome: "+livro.nome+"| ano: "+livro.ano+"\nCategorias:\n";
+            livro.categoria.forEach(element => {
+                resposta+="- "+element+"\n";
+              })
+            resposta+="Autor: "+this.getNomeAutorPorID(livro.autor)+"\nEditora: "+this.getNomeEditoraPorID(livro.editora)+"\n"
+            console.log(resposta)
+        }
+        )
+    }
+
+    getLivros(){
+        fetch(this.#livro_url)
+        .then( elements => elements.json())
+        .then( elements => 
+            elements.forEach(element =>{
+                let livro = new Livro(
+                    element.id,
+                    element.nome,
+                    element.ano,
+                    element.capa,
+                    element.categorias,
+                    element.autor,
+                    element.editora
+                )
+                this.#livros_lista.push(livro);
+                }
+            )
+        )
+        .then(()=>{
+                this.showLivroData();
+            }
+        )
+        .catch(error => {
+            throw(error);
+            }
+        )
+        .finally(
+            console.log("livros lidos")
+        );
+    }
+
+    getAutores(){
+        fetch(this.#autores_url)
+        .then( elements => elements.json())
+        .then( elements => 
+            elements.forEach(element =>{
+                let autor = new Autor(
+                    element.id,
+                    element.nome,
+                    element.perfil    
+                );
+                this.#autores_lista.push(autor);
+               
             })
         )
         .then(console.log("ok")
         )
-        .catch(
-
+        .catch(error => {
+            throw(error);
+            }
         )
         .finally(
-            console.log("okk")
+            console.log("autores lido")
         );
     }
 

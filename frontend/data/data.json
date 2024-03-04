@@ -24,5 +24,83 @@
             "imagem":"./data/imgs/draco.png",
             "avaliacao":4
         }
+    ],
+    "livros":[
+        {
+            "id":1,
+            "nome":"Livro Muito Legal",
+            "ano": 1982,
+            "capa":"undefined",
+            "categorias":[
+                "Terror",
+                "Suspense"
+            ],
+            "autor":1,
+            "editora":1
+        },
+        {
+            "id":2,
+            "nome":"Cara, quero muito pegar minha vizinho de 42 anos",
+            "ano": 2024,
+            "categorias":[
+                "Romance",
+                "Suspense"
+            ],
+            "autor":1,
+            "editora":2
+        },
+        {
+            "id":3,
+            "nome":"Macaco que apertava botões",
+            "ano": 2010,
+            "capa":"undefined",
+            "categorias":[
+                "Tecnologia",
+                "Educacional"
+            ],
+            "autor":2,
+            "editora":2
+        },
+        {
+            "id":4,
+            "nome":"Ciência para Nerds Bisonhos",
+            "ano": 2005,
+            "capa":"undefined",
+            "categorias":[
+                "Ciência",
+                "Educacional"
+            ],
+            "autor":3,
+            "editora":1
+        },
+        {
+            "id":5,
+            "nome":"Fogo no parquinho",
+            "ano": 1999,
+            "capa":"undefined",
+            "categorias":[
+                "Romance",
+                "Drama"
+            ],
+            "autor":3,
+            "editora":3
+        }
+    ],
+    "autores":[
+        {
+            "id":1,
+            "nome":"Michael Scott",
+            "perfil":"undefined"
+        },
+        {
+            "id":2,
+            "nome":"Donattelo",
+            "perfil":"undefined"
+        },{
+            "id":3,
+            "nome":"Petter Parker",
+            "perfil":"undefined"
+        }
     ]
+    
 }

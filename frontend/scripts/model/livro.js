@@ -1,9 +1,12 @@
 class Livro {
-  constructor(id ,nome, ano, categoria) {
+  constructor(id ,nome, ano, capa,  categoria, autor, editora) {
     this.id = id;
     this.nome = nome;
     this.ano = ano;
+    this.capa = capa;
     this.categoria = categoria;
+    this.autor = autor;
+    this.editora = editora;
   }
 
   showData(){
