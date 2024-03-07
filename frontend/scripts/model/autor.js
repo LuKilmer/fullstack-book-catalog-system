@@ -1,8 +1,9 @@
 class Autor {
-    constructor(id ,nome, perfil) {
+    constructor(id ,nome, perfil, dtnascimento) {
       this.id = id;
       this.nome = nome;
-      this.perfil = perfil
+      this.perfil = perfil;
+      this.dtnascimento = dtnascimento;
     }
   }
   

@@ -9,14 +9,58 @@
 </head>
 <body>
     <header></header>
+    <!--modal Editora-->
+    <div class="modal" id="modal-editora">
+        <div class="top-modal">
+            <p>Adicionar Editora</p>
+            <span class="botao-fechar"id="modal-editora-fechar" style="cursor: pointer;">&times;</span>
+        </div>
+       
+    </div>
+    <!--modal Livro-->
+    <div class="modal" id="modal-livro">
+        <div class="top-modal">
+            <p>Adicionar Livro</p>
+            <span class="botao-fechar"id="modal-livro-fechar" style="cursor: pointer;">&times;</span>
+        </div>
+
+     
+    </div>
+
+    <!--modal Autor-->
+    <div class="modal" id="modal-autor">
+        <div class="top-modal">
+            <p>Adicionar Autor</p>
+            <span class="botao-fechar"id="modal-autor-fechar" style="cursor: pointer;">&times;</span>
+        </div>
+        <form id="meuFormulario">
+            <!-- Campo para o Nome -->
+            <label for="nome-autor">Nome:</label>
+            <input type="text" id="nome-autor" name="nome" required>
+        
+            <!-- Campo para a Foto de Perfil -->
+            <label for="foto-autor">Foto de Perfil:</label>
+            <input type="file" id="foto-autor" name="foto" accept="image/*" required>
+        
+            <!-- Botão de Envio -->
+            <button type="button" id="botao-enviar-autor">Enviar</button>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+
     <div id="main">
         <section id="carousel-novidades" class="grid-item">
-
+            <h2>Sessão de Manipulação de Dados</h2>
+            <div id="botoes-container">
+                <button id="livros-botao">Livros</button>
+                <button id="autores-botao">Autores</button>
+                <button id="editoras-botao">Editoras</button>
+            </div>
         </section>
         <section id="posts" class="grid-item">
             <div class="header">Publicações</div>
             <div id="posts-itens">
-                
             </div>
         </section>
         <section id="autores" class="grid-item">
