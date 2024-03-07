@@ -6,6 +6,7 @@
     <title>Biblioteca</title>
     <link href="./style/main.css" rel="stylesheet">
     <link href="./style/components.css" rel="stylesheet">
+    <link href="./style/modal.css" rel="stylesheet">
 </head>
 <body>
     <header></header>
@@ -33,16 +34,17 @@
             <p>Adicionar Autor</p>
             <span class="botao-fechar"id="modal-autor-fechar" style="cursor: pointer;">&times;</span>
         </div>
-        <form id="meuFormulario">
-            <!-- Campo para o Nome -->
+        <form id="formulario">
+           
             <label for="nome-autor">Nome:</label>
             <input type="text" id="nome-autor" name="nome" required>
         
-            <!-- Campo para a Foto de Perfil -->
-            <label for="foto-autor">Foto de Perfil:</label>
-            <input type="file" id="foto-autor" name="foto" accept="image/*" required>
-        
-            <!-- Botão de Envio -->
+            <div>
+                <label for="foto-autor">Foto de Perfil:</label>
+                <input type="file" id="foto-autor" name="foto" accept="image/*" required>
+            </div>
+            
+
             <button type="button" id="botao-enviar-autor">Enviar</button>
         </form>
     </div>
