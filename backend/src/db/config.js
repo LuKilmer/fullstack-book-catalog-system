@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
-
+//service mongod start
 async function main(){
     try{
         await mongoose.connect(
             "mongodb://localhost:27017/library-system"
         ).then(() => {
-            console.log("Databse Connected Successfully!!");    
+            console.log("Banco de Dados conectado com sucesso!!");    
         }).catch(err => {
-            console.log('Could not connect to the database', err);
+            console.log('Não foi possível conectar ao Banco de Dados', err);
             process.exit();
         });
     }catch(error){

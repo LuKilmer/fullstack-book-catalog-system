@@ -14,4 +14,5 @@ app.use("/api",routes);
 
 app.listen(3000,function(){
     console.log("Funcionou, tudo ok!")
+    console.log("Servidor rodando no endereço: http://localhost:3000/api/")
 })
