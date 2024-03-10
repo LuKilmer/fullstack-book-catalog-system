@@ -1,0 +1,11 @@
+POST http://localhost:3000/api/autores
+Content-Type: application/json
+
+{
+    "primeiro_nome":"Paulo",
+    "segundo_nome":"Guedes"
+}
+
+###
+
+GET  http://localhost:3000/api/autores
