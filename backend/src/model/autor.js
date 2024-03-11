@@ -4,6 +4,11 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const autorSchema = new Schema({
+    id:{
+        type: Number,
+        required: true,
+        unique : true
+    },
     primeiro_nome: {
         type: String,
         required: true

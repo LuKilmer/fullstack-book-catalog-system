@@ -2,10 +2,18 @@ POST http://localhost:3000/api/autores
 Content-Type: application/json
 
 {
-    "primeiro_nome":"Alfred",
-    "segundo_nome":"Norton"
+    "id":2,
+    "primeiro_nome":"Pedro",
+    "segundo_nome":"Do Monte"
 }
 
 ###
 
 GET  http://localhost:3000/api/autores
+
+###
+
+GET http://localhost:3000/api/autores/54
+
+###
+DELETE http://localhost:3000/api/autores/2
