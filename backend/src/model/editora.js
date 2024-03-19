@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const editoraSchema = new Schema({
-    id_editora: {
+    id: {
         type: Number,
-        required: true
+        required: true,
+        unique : true
     },
     nome: {
         type: String,
@@ -14,12 +15,6 @@ const editoraSchema = new Schema({
 },
 {
     timestamps: true
-});
-editoraSchema.plugin(autoIncrement.plugin, {
-    model: "Editora",  
-    field: "id_editora", 
-    startAt: 1, 
-    incrementBy: 1 
 });
 
 const Editora = mongoose.model("Editora", editoraSchema);

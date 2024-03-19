@@ -1,6 +1,7 @@
 const router = require("express").Router();
 
 const autorRouter = require("./autor");
+const editoraRouter = require("./editora");
 
 
 router
@@ -10,5 +11,7 @@ router
 });
 
 router.use("/", autorRouter);
+
+router.use("/", editoraRouter);
 
 module.exports = router;

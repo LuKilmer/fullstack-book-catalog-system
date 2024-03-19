@@ -34,7 +34,7 @@ class AutorService{
         if(autor){
             return autor;
         }else{
-            throw new Erro('Não existe o ID informado', 400);
+            throw new Erro('Não existe o ID informado', 404);
         };
     }
 
