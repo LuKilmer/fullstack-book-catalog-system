@@ -13,7 +13,7 @@ GET  http://localhost:3000/api/autores
 
 ###
 
-GET http://localhost:3000/api/autores/54
+GET http://localhost:3000/api/autores/2
 
 ###
 DELETE http://localhost:3000/api/autores/2
